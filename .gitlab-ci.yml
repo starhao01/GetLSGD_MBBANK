@@ -1,0 +1,17 @@
+---
+stages:
+  - build
+build:
+  stage: build
+  tags: 
+    - dev183-shell
+  script:
+    - pwd
+    - ls
+    - whoami
+    - kill -9 $(ps -ef | grep vtp-sso-0.0.1-SNAPSHOT.jar | grep -v grep | awk '{print $2}')
+    - ps aux | grep vtp-sso-0.0.1-SNAPSHOT.jar
+    - mvn clean package
+    - nohup java -jar target/vtp-sso-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 & 
+  only:
+    - tags

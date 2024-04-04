@@ -1,0 +1,6 @@
+projectKey=sso-release
+serverUrl=https://sonar.viettelpost.vn
+serverVersion=9.2.4.50792
+dashboardUrl=https://sonar.viettelpost.vn/dashboard?id=sso-release
+ceTaskId=AYQtXTu2YjIDOjVbkETL
+ceTaskUrl=https://sonar.viettelpost.vn/api/ce/task?id=AYQtXTu2YjIDOjVbkETL
